@@ -1,4 +1,4 @@
-// AppleGenericVersioningTests AppleGenericVersioningTests.m
+// AppleGenericVersioning AppleGenericVersioning.xcconfig
 //
 // Copyright © 2011, Roy Ratcliffe, Pioneering Software, United Kingdom
 //
@@ -22,19 +22,17 @@
 //
 //------------------------------------------------------------------------------
 
-#import "AppleGenericVersioningTests.h"
-#import "AppleGenericVersioning.h"
+// To start using Apple-generic versioning, copy and paste the following lines
+// as text. Paste them to your Project's build settings. Xcode understands what
+// they mean. Take care to paste them to your Project settings, not your Target
+// settings. After pasting, you will see three new settings appear in bold, with
+// new values as follows:
+//
+//	Current Project Version:	0
+//	Versioning Name Prefix:		k
+//	Versioning System:			Apple Generic
+//
 
-@implementation AppleGenericVersioningTests
-
-- (void)testVersionString
-{
-	STAssertEqualObjects(AppleGenericVersioningVersionString(), @"@(#)PROGRAM:AppleGenericVersioning  PROJECT:AppleGenericVersioning-0", nil);
-}
-
-- (void)testVersionNumber
-{
-	STAssertEquals(kAppleGenericVersioningVersionNumber, 0.0, nil);
-}
-
-@end
+CURRENT_PROJECT_VERSION = 0
+VERSION_INFO_PREFIX = k
+VERSIONING_SYSTEM = apple-generic

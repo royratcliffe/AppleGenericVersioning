@@ -45,6 +45,7 @@
 		7852C0E513F570C90001A709 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7852C0E713F570C90001A709 /* AppleGenericVersioningTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleGenericVersioningTests.h; sourceTree = "<group>"; };
 		7852C0E913F570C90001A709 /* AppleGenericVersioningTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppleGenericVersioningTests.m; sourceTree = "<group>"; };
+		7852C0F313F571820001A709 /* AppleGenericVersioning.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AppleGenericVersioning.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +114,7 @@
 			children = (
 				7852C0D213F570C80001A709 /* AppleGenericVersioning.h */,
 				7852C0D313F570C80001A709 /* AppleGenericVersioning.m */,
+				7852C0F313F571820001A709 /* AppleGenericVersioning.xcconfig */,
 				7852C0CC13F570C80001A709 /* Supporting Files */,
 			);
 			path = AppleGenericVersioning;
@@ -312,6 +314,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 0;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -329,6 +332,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = k;
 			};
 			name = Debug;
 		};
@@ -338,6 +343,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 0;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -348,11 +354,14 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = k;
 			};
 			name = Release;
 		};
 		7852C0EE13F570C90001A709 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7852C0F313F571820001A709 /* AppleGenericVersioning.xcconfig */;
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -367,6 +376,7 @@
 		};
 		7852C0EF13F570C90001A709 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7852C0F313F571820001A709 /* AppleGenericVersioning.xcconfig */;
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
