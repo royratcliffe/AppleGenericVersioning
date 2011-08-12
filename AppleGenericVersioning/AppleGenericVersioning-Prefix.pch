@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'AppleGenericVersioning' target in the 'AppleGenericVersioning' project
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+#endif
