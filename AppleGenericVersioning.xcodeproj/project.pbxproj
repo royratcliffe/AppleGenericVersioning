@@ -29,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7835BC651414B38000CC4B56 /* Versioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Versioning.h; sourceTree = "<group>"; };
+		7835BC661414B38000CC4B56 /* Versioning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Versioning.m; sourceTree = "<group>"; };
 		7852C0C213F570C80001A709 /* AppleGenericVersioning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppleGenericVersioning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7852C0C513F570C80001A709 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		7852C0C813F570C80001A709 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -70,6 +72,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7835BC681414B38600CC4B56 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				7835BC651414B38000CC4B56 /* Versioning.h */,
+				7835BC661414B38000CC4B56 /* Versioning.m */,
+			);
+			name = Templates;
+			sourceTree = "<group>";
+		};
 		7852C0B613F570C80001A709 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +126,7 @@
 				7852C0D213F570C80001A709 /* AppleGenericVersioning.h */,
 				7852C0D313F570C80001A709 /* AppleGenericVersioning.m */,
 				7852C0F313F571820001A709 /* AppleGenericVersioning.xcconfig */,
+				7835BC681414B38600CC4B56 /* Templates */,
 				7852C0CC13F570C80001A709 /* Supporting Files */,
 			);
 			path = AppleGenericVersioning;
@@ -432,6 +444,7 @@
 				7852C0EF13F570C90001A709 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7852C0F013F570C90001A709 /* Build configuration list for PBXNativeTarget "AppleGenericVersioningTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +453,7 @@
 				7852C0F213F570C90001A709 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
