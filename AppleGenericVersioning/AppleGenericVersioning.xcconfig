@@ -37,6 +37,29 @@ CURRENT_PROJECT_VERSION = 0
 VERSION_INFO_PREFIX = k
 VERSIONING_SYSTEM = apple-generic
 
-// Copy the following to your building settings for project testing targets.
+// Copy the following to your build settings for project testing targets. You
+// can then test versioning using the following test cases. The tests below
+// correctly check for double space between the program and project names, and a
+// trailing new-line character. The version number type-casts to double in order
+// to avoid type mismatches when version numbers have no fractional part.
+//
+//	#define PROGRAM_NAME_STRING PROJECT_NAME_STRING
+//	#define AT_HASH "@(#)PROGRAM:" PROGRAM_NAME_STRING "  PROJECT:" PROJECT_NAME_STRING "-"
+//
+//	- (void)testVersionString
+//	{
+//		STAssertEqualObjects(<#project name#>VersionString(), @AT_HASH CURRENT_PROJECT_VERSION_STRING, nil);
+//	}
+//
+//	- (void)testVersionCString
+//	{
+//		STAssertEquals(strcmp((const char *)k<#project name#>VersionString, AT_HASH CURRENT_PROJECT_VERSION_STRING "\n"), 0, nil);
+//	}
+//
+//	- (void)testVersionNumber
+//	{
+//		STAssertEquals(k<#project name#>VersionNumber, (double)CURRENT_PROJECT_VERSION, nil);
+//	}
+//
 
 GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = PROJECT_NAME_STRING="\"$(PROJECT_NAME)\"" CURRENT_PROJECT_VERSION_STRING="\"$(CURRENT_PROJECT_VERSION)\"" CURRENT_PROJECT_VERSION=$(CURRENT_PROJECT_VERSION) $(inherited)
