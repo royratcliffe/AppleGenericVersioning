@@ -217,6 +217,7 @@
 		7852C0B813F570C80001A709 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "Pioneering Software, United Kingdom";
 			};
 			buildConfigurationList = 7852C0BB13F570C80001A709 /* Build configuration list for PBXProject "AppleGenericVersioning" */;
@@ -326,7 +327,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 0;
+				CURRENT_PROJECT_VERSION = 4.3;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -355,7 +356,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 0;
+				CURRENT_PROJECT_VERSION = 4.3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -373,10 +374,9 @@
 		};
 		7852C0EE13F570C90001A709 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7852C0F313F571820001A709 /* AppleGenericVersioning.xcconfig */;
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 4.3;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppleGenericVersioning/AppleGenericVersioning-Prefix.pch";
@@ -388,10 +388,9 @@
 		};
 		7852C0EF13F570C90001A709 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7852C0F313F571820001A709 /* AppleGenericVersioning.xcconfig */;
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 4.3;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppleGenericVersioning/AppleGenericVersioning-Prefix.pch";
@@ -407,6 +406,12 @@
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppleGenericVersioning/AppleGenericVersioning-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"PROJECT_NAME_STRING=\"\\\"$(PROJECT_NAME)\\\"\"",
+					"CURRENT_PROJECT_VERSION_STRING=\"\\\"$(CURRENT_PROJECT_VERSION)\\\"\"",
+					"CURRENT_PROJECT_VERSION=$(CURRENT_PROJECT_VERSION)",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "AppleGenericVersioningTests/AppleGenericVersioningTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
@@ -419,6 +424,12 @@
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppleGenericVersioning/AppleGenericVersioning-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"PROJECT_NAME_STRING=\"\\\"$(PROJECT_NAME)\\\"\"",
+					"CURRENT_PROJECT_VERSION_STRING=\"\\\"$(CURRENT_PROJECT_VERSION)\\\"\"",
+					"CURRENT_PROJECT_VERSION=$(CURRENT_PROJECT_VERSION)",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "AppleGenericVersioningTests/AppleGenericVersioningTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;

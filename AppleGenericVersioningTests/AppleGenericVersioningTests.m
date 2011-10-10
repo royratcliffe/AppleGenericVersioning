@@ -27,14 +27,22 @@
 
 @implementation AppleGenericVersioningTests
 
+#define PROGRAM_NAME_STRING PROJECT_NAME_STRING
+#define AT_HASH "@(#)PROGRAM:" PROGRAM_NAME_STRING "  PROJECT:" PROJECT_NAME_STRING "-"
+
 - (void)testVersionString
 {
-	STAssertEqualObjects(AppleGenericVersioningVersionString(), @"@(#)PROGRAM:AppleGenericVersioning  PROJECT:AppleGenericVersioning-0", nil);
+	STAssertEqualObjects(AppleGenericVersioningVersionString(), @AT_HASH CURRENT_PROJECT_VERSION_STRING, nil);
+}
+
+- (void)testVersionCString
+{
+	STAssertEquals(strcmp((const char *)kAppleGenericVersioningVersionString, AT_HASH CURRENT_PROJECT_VERSION_STRING "\n"), 0, nil);
 }
 
 - (void)testVersionNumber
 {
-	STAssertEquals(kAppleGenericVersioningVersionNumber, 0.0, nil);
+	STAssertEquals(kAppleGenericVersioningVersionNumber, (double)CURRENT_PROJECT_VERSION, nil);
 }
 
 @end
