@@ -29,13 +29,10 @@ NSString *AppleGenericVersioningVersionString()
 	// The implementation assumes that the raw C-language version string
 	// terminates with null. It also trims assuming that the very last character
 	// is a terminating line feed. Also assumes UTF-8 encoding.
-	static NSString *versionString;
+	static NSString *__strong versionString;
 	if (versionString == nil)
 	{
-		versionString = [[[NSString stringWithCString:(const char *)kAppleGenericVersioningVersionString encoding:NSUTF8StringEncoding] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] retain];
-		atexit_b(^(void) {
-			[versionString release];
-		});
+		versionString = [[NSString stringWithCString:(const char *)kAppleGenericVersioningVersionString encoding:NSUTF8StringEncoding] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 	}
 	return versionString;
 }
