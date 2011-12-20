@@ -42,7 +42,12 @@
 
 - (void)testVersionNumber
 {
-	STAssertEquals(kAppleGenericVersioningVersionNumber, (double)CURRENT_PROJECT_VERSION, nil);
+	// Use atof on the string form of the version number in cases where the
+	// current project version has three components: major, minor and patch. In
+	// such cases the embedded Apple-generic version number represents just the
+	// major and minor in the form of a double-precision floating-point number:
+	// the integer part being the major, the fractional part being the minor.
+	STAssertEquals(kAppleGenericVersioningVersionNumber, atof(CURRENT_PROJECT_VERSION_STRING), nil);
 }
 
 @end
