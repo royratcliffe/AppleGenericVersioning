@@ -28,12 +28,12 @@
 // settings. After pasting, you will see three new settings appear in bold, with
 // new values as follows:
 //
-//	Current Project Version:	0
+//	Current Project Version:	1
 //	Versioning Name Prefix:		k
 //	Versioning System:			Apple Generic
 //
 
-CURRENT_PROJECT_VERSION = 0
+CURRENT_PROJECT_VERSION = 1
 VERSION_INFO_PREFIX = k
 VERSIONING_SYSTEM = apple-generic
 
