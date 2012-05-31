@@ -50,4 +50,16 @@
 	STAssertEquals(kAppleGenericVersioningVersionNumber, atof(CURRENT_PROJECT_VERSION_STRING), nil);
 }
 
+#define BUNDLE_IDENTIFIER_STRING "uk.co.pioneeringsoftware.AppleGenericVersioning"
+
+- (void)testBundleVersion
+{
+	// This test assumes that you assign your Info.plist's CFBundleVersion entry
+	// to ${CURRENT_PROJECT_VERSION}. Hence when you bump the version using
+	// agvtool new-version, the Info.plist bumps in sync.
+	NSBundle *bundle = [NSBundle bundleWithIdentifier:@BUNDLE_IDENTIFIER_STRING];
+	NSString *bundleVersion = [bundle objectForInfoDictionaryKey:(__bridge NSString *)kCFBundleVersionKey];
+	STAssertEqualObjects(bundleVersion, @CURRENT_PROJECT_VERSION_STRING, nil);
+}
+
 @end
