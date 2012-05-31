@@ -39,15 +39,15 @@
 		7852C0CD13F570C80001A709 /* AppleGenericVersioning-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppleGenericVersioning-Info.plist"; sourceTree = "<group>"; };
 		7852C0CF13F570C80001A709 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7852C0D113F570C80001A709 /* AppleGenericVersioning-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppleGenericVersioning-Prefix.pch"; sourceTree = "<group>"; };
-		7852C0D213F570C80001A709 /* AppleGenericVersioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleGenericVersioning.h; sourceTree = "<group>"; };
-		7852C0D313F570C80001A709 /* AppleGenericVersioning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppleGenericVersioning.m; sourceTree = "<group>"; };
+		7852C0D213F570C80001A709 /* AppleGenericVersioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppleGenericVersioning.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		7852C0D313F570C80001A709 /* AppleGenericVersioning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppleGenericVersioning.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		7852C0DA13F570C90001A709 /* AppleGenericVersioningTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleGenericVersioningTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7852C0DB13F570C90001A709 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		7852C0E313F570C90001A709 /* AppleGenericVersioningTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppleGenericVersioningTests-Info.plist"; sourceTree = "<group>"; };
 		7852C0E513F570C90001A709 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7852C0E713F570C90001A709 /* AppleGenericVersioningTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleGenericVersioningTests.h; sourceTree = "<group>"; };
 		7852C0E913F570C90001A709 /* AppleGenericVersioningTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppleGenericVersioningTests.m; sourceTree = "<group>"; };
-		7852C0F313F571820001A709 /* AppleGenericVersioning.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AppleGenericVersioning.xcconfig; sourceTree = "<group>"; };
+		7852C0F313F571820001A709 /* AppleGenericVersioning.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; lineEnding = 0; path = AppleGenericVersioning.xcconfig; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.xcconfig; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
