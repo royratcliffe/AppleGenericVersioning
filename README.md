@@ -24,13 +24,13 @@ Accordingly, an application's _About_ panel computes version numbers using the f
 
 Further complications exist for frameworks and dynamic libraries.
 
-Frameworks and libraries under OS X also carry other version numbers within the Mach-O binary, namely the _current_ version and the _compatibility_ version. Both these three-component X.Y.Z version numbers have some basic size limitations. All components are integers of course; but due to bit-width allocations, major has a maximum of 65,535 while minor and patch have a maximum of 255. You can guess why. Mach-O format uses 16 bits and 8 bits two store these numbers within the dynamic-library binary.
+Frameworks and libraries under OS X also carry other version numbers within the Mach-O binary, namely the _current_ version and the _compatibility_ version. Both these three-component X.Y.Z version numbers have some basic size limitations. All components are integers of course; but due to bit-width allocations, major (X) has a maximum of 65,535 while minor (Y) and patch (Z) have a maximum of 255. You can guess why. Mach-O format uses 16 bits and 8 bits two store these numbers within the dynamic-library binary.
 
-Note that Mach-O version numbers _are_ explicitly three-tiered X.Y.Z numbers. In fact, if you run `otool -L` on the binaries, shorter version numbers extend by adding zeros.
+Note that Mach-O version numbers _are_ explicitly three-tiered X.Y.Z numbers. In fact, if you run `otool -L` on the binaries, shorter version numbers extend by adding zeros. Version 1 becomes version 1.0.0.
 
 ## Reconciling With Major.Minor.Patch
 
-How to map major.minor.patch version scheme to Apple's generic versioning?
+How to map a major.minor.patch version scheme to Apple's generic versioning?
 
 `CURRENT_PROJECT_VERSION` by default defines the bundle version (long, i.e. build version) _and_ at the same time the dynamic library version number. That is, `DYLIB_CURRENT_VERSION` tracks `CURRENT_PROJECT_VERSION`. When you change the build-version number using Apple's `agvtool` (Apple-generic versioning tool), you change both the current library and current project version together.
 
