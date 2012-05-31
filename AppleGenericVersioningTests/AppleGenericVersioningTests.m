@@ -62,4 +62,21 @@
 	STAssertEqualObjects(bundleVersion, @CURRENT_PROJECT_VERSION_STRING, nil);
 }
 
+// Oddly, even in Lion 10.7, the operating system does not declare or define
+// kCFBundleShortVersionStringKey. Is this fact sending us a message I wonder?
+// Are Apple saying, "Hands off!"
+const CFStringRef kCFBundleShortVersionStringKey = CFSTR("CFBundleShortVersionString");
+
+- (void)testBundleShortVersion
+{
+	NSBundle *bundle = [NSBundle bundleWithIdentifier:@BUNDLE_IDENTIFIER_STRING];
+	NSString *bundleShortVersion = [bundle objectForInfoDictionaryKey:(__bridge NSString *)kCFBundleShortVersionStringKey];
+	
+	// There exists no easy way to assert the correctness of the short
+	// version. It only exists within the Info.plist for the purpose of display
+	// within the About panel. Instead, just log the short version to the test
+	// console.
+	NSLog(@"Short Version String: \"%@\" (Marketing Version)", bundleShortVersion);
+}
+
 @end
