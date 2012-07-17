@@ -79,4 +79,11 @@ const CFStringRef kCFBundleShortVersionStringKey = CFSTR("CFBundleShortVersionSt
 	NSLog(@"Short Version String: \"%@\" (Marketing Version)", bundleShortVersion);
 }
 
+- (void)testVersioning
+{
+	STAssertNotNil(AppleGenericVersioningVersionString(), nil);
+	STAssertTrue(strcmp(@encode(typeof(kAppleGenericVersioningVersionString)), "^C") == 0, nil);
+	STAssertTrue(strcmp(@encode(typeof(kAppleGenericVersioningVersionNumber)), "d") == 0, nil);
+}
+
 @end

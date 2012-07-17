@@ -61,5 +61,17 @@ VERSIONING_SYSTEM = apple-generic
 //		STAssertEquals(k<#project name#>VersionNumber, (double)CURRENT_PROJECT_VERSION, nil);
 //	}
 //
+// Use the following test if you do not care about the version string and number
+// contents. The assertions below only test for the presence of the Next Step
+// version string, the C-type version string and the double-precision version
+// number. Their actual values have no expectations.
+//
+//	- (void)testVersioning
+//	{
+//		STAssertNotNil(<#project name#>VersionString(), nil);
+//		STAssertTrue(strcmp(@encode(typeof(k<#project name#>VersionString)), "^C") == 0, nil);
+//		STAssertTrue(strcmp(@encode(typeof(k<#project name#>VersionNumber)), "d") == 0, nil);
+//	}
+//
 
 GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = PROJECT_NAME_STRING="\"$(PROJECT_NAME)\"" CURRENT_PROJECT_VERSION_STRING="\"$(CURRENT_PROJECT_VERSION)\"" CURRENT_PROJECT_VERSION=$(CURRENT_PROJECT_VERSION) $(inherited)
