@@ -1,6 +1,6 @@
 // AppleGenericVersioningTests AppleGenericVersioningTests.m
 //
-// Copyright © 2011, 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
+// Copyright © 2011–2013, Roy Ratcliffe, Pioneering Software, United Kingdom
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the “Software”), to deal
@@ -71,7 +71,7 @@ const CFStringRef kCFBundleShortVersionStringKey = CFSTR("CFBundleShortVersionSt
 {
 	NSBundle *bundle = [NSBundle bundleWithIdentifier:@BUNDLE_IDENTIFIER_STRING];
 	NSString *bundleShortVersion = [bundle objectForInfoDictionaryKey:(__bridge NSString *)kCFBundleShortVersionStringKey];
-	
+
 	// There exists no easy way to assert the correctness of the short
 	// version. It only exists within the Info.plist for the purpose of display
 	// within the About panel. Instead, just log the short version to the test
