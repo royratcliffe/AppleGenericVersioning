@@ -1,6 +1,6 @@
 /* AppleGenericVersioning AppleGenericVersioning.h
  *
- * Copyright © 2011, 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
+ * Copyright © 2011–2013, Roy Ratcliffe, Pioneering Software, United Kingdom
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the “Software”), to deal
@@ -27,10 +27,11 @@
 extern const unsigned char kAppleGenericVersioningVersionString[];
 extern const double kAppleGenericVersioningVersionNumber;
 
-/*!
- * Answers the current Apple-generic versioning-formatted version string. The
- * version string has been trimmed. It has no leading or trailing whitespace or
- * newlines. Note that the raw C-based version string contrastingly has a single
- * terminating newline character.
+/**
+ * Answers the current Apple-generic versioning-formatted version string.
+ *
+ * The version string has been trimmed. It has no leading or trailing whitespace
+ * or newlines. Note that the raw C-based version string contrastingly has a
+ * single terminating newline character.
  */
 NSString *AppleGenericVersioningVersionString(void);
