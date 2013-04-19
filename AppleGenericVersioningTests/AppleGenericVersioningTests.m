@@ -71,7 +71,7 @@ const CFStringRef kCFBundleShortVersionStringKey = CFSTR("CFBundleShortVersionSt
 {
 	NSBundle *bundle = [NSBundle bundleWithIdentifier:@BUNDLE_IDENTIFIER_STRING];
 	NSString *bundleShortVersion = [bundle objectForInfoDictionaryKey:(__bridge NSString *)kCFBundleShortVersionStringKey];
-	
+
 	// There exists no easy way to assert the correctness of the short
 	// version. It only exists within the Info.plist for the purpose of display
 	// within the About panel. Instead, just log the short version to the test
