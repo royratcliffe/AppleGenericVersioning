@@ -27,10 +27,11 @@
 extern const unsigned char k<#project name#>VersionString[];
 extern const double k<#project name#>VersionNumber;
 
-/*!
- * Answers the current Apple-generic versioning-formatted version string. The
- * version string has been trimmed. It has no leading or trailing whitespace or
- * newlines. Note that the raw C-based version string contrastingly has a single
- * terminating newline character.
+/**
+ * Answers the current Apple-generic versioning-formatted version string.
+ *
+ * The version string has been trimmed. It has no leading or trailing whitespace
+ * or newlines. Note that the raw C-based version string contrastingly has a
+ * single terminating newline character.
  */
 NSString *<#project name#>VersionString(void);
