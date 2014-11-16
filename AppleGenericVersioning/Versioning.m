@@ -29,10 +29,11 @@ NSString *<#project name#>VersionString()
 	// The implementation assumes that the raw C-language version string
 	// terminates with null. It also trims assuming that the very last character
 	// is a terminating line feed. Also assumes UTF-8 encoding.
-	static NSString *__strong versionString;
-	if (versionString == nil)
-	{
-		versionString = [[NSString stringWithCString:(const char *)k<#project name#>VersionString encoding:NSUTF8StringEncoding] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-	}
+	static NSString *versionString;
+	static dispatch_once_t once;
+	dispatch_once(&once, ^{
+		versionString = [[NSString alloc] initWithUTF8String:(const char *)k<#project name#>VersionString];
+		versionString = [versionString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+	});
 	return versionString;
 }
